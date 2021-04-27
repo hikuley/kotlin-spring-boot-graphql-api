@@ -11,7 +11,6 @@ on:
 
 jobs:
   gcp-configuration:
-    needs: [ build, test ]
     runs-on: ubuntu-latest
 
     steps:
