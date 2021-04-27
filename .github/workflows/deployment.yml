@@ -64,12 +64,12 @@ jobs:
 #      - name: Deploy to docker registery
 #        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 #
-      - name: Kubernte Setup
+      - name: Setup kubectl
       - uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG_FILE }}
         with:
-          args: get all
+          args: get pods
 
 
 
