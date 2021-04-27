@@ -62,7 +62,7 @@ jobs:
         run: ./gradlew build
 
       - name: Deploy to docker registery
-        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-ap
+        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 
 
 
