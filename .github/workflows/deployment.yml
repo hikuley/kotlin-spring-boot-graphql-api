@@ -28,10 +28,10 @@ jobs:
           version: "273.0.0"
           service_account_key: ${{ secrets.SERVICE_ACCOUNT }}
 
-      - name: Set GCP_PROJECT
-        env:
-          GCP_PROJECT: ${{ secrets.PROJECT_ID }}
-        run: gcloud --quiet config set project ${GCP_PROJECT}
+#      - name: Set GCP_PROJECT
+#        env:
+#          GCP_PROJECT: ${{ secrets.PROJECT_ID }}
+#        run: gcloud --quiet config set project ${GCP_PROJECT}
 
       - name: setup registery
         run: gcloud auth configure-docker europe-west2-docker.pkg.dev
