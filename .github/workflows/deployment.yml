@@ -26,6 +26,9 @@ jobs:
       - name: Use gcloud CLI
         run: gcloud auth configure-docker
 
+      - name: Use gcloud CLI
+        run: gcloud auth configure-docker europe-west2-docker.pkg.dev
+
 
 #      - name: Set GCP_PROJECT
 #        env:
