@@ -23,11 +23,13 @@ jobs:
       - name: gcloud info
         run: gcloud info
 
+      - name: configure-docker
+        run: gcloud auth configure-docker europe-west2-docker.pkg.dev
+
       - name: configure-docker info
         run: gcloud auth configure-docker
 
-      - name: configure-docker
-        run: gcloud auth configure-docker europe-west2-docker.pkg.dev
+
 
 
 #      - name: Set GCP_PROJECT
