@@ -30,6 +30,7 @@ jobs:
         run: gcloud auth configure-docker
 
   build:
+    needs: [setup]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -37,10 +38,13 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+
       - name: Clean
         run: ./gradlew clean
+
       - name: Build
         run: ./gradlew build
+
       - name: Deploy to docker registery
         run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-ap
 
