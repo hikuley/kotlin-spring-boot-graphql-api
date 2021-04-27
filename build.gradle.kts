@@ -7,6 +7,7 @@ plugins {
     kotlin("jvm") version "1.4.30"
     kotlin("plugin.spring") version "1.4.30"
     id("com.netflix.dgs.codegen") version "4.0.12"
+    id("com.google.cloud.tools.jib") version "3.0.0"
 }
 
 group = "com.kuleysoft"

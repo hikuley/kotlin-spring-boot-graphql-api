@@ -10,11 +10,11 @@ import com.netflix.graphql.dgs.DgsData
 class ShowsDataFetcher {
 
     private val shows = listOf(
-            Show("Stranger Thingss", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
             Show("Stranger Things", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
-            Show("Stranger Things", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
-            Show("Stranger Things", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
-            Show("Stranger Things", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
+            Show("Stranger Things", listOf(Actor("Samet"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
+            Show("Stranger Things", listOf(Actor("Cengiz"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
+            Show("Stranger Things", listOf(Actor("Han"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
+            Show("Stranger Things", listOf(Actor("Eks"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
     )
 
     @DgsData(parentType = "Query", field = "shows")
