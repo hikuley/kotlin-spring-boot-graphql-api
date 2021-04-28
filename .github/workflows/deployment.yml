@@ -48,4 +48,4 @@ jobs:
 #        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 
       - name: Deploy to Kubernetes
-        run: kubectl apply --filename service.yaml
+        run: kubectl apply --filename knative-deployment.yaml
