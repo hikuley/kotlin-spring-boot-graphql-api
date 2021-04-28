@@ -26,6 +26,9 @@ jobs:
       - name: configure-docker
         run: gcloud auth configure-docker europe-west2-docker.pkg.dev
 
+      - name: connect cluster
+        run: gcloud container clusters get-credentials cluster-1 --zone europe-central2-a --project dev-env-309121
+
       - name: configure-docker info
         run: gcloud auth configure-docker
 
