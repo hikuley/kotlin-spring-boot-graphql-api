@@ -10,46 +10,46 @@ on:
     branches: [ master ]
 
 jobs:
-#  build:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Set up Cloud SDK
-#        uses: google-github-actions/setup-gcloud@master
-#        with:
-#          project_id: ${{ secrets.GCP_PROJECT_ID }}
-#          service_account_key: ${{ secrets.SERVICE_ACCOUNT }}
-#          export_default_credentials: true
-#
-#      - name: gcloud info
-#        run: gcloud info
-#
-#      - name: configure-docker
-#        run: gcloud auth configure-docker europe-west2-docker.pkg.dev
-#
-#      - name: configure-docker info
-#        run: gcloud auth configure-docker
-#
-#      - uses: actions/checkout@v2
-#      - name: Set up JDK 11
-#        uses: actions/setup-java@v1
-#        with:
-#          java-version: 11
-#
-#      - name: Clean
-#        run: ./gradlew clean
-#
-#      - name: Build
-#        run: ./gradlew build
-#
-#      - name: Deploy to docker registery
-#        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
+  #  build:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Set up Cloud SDK
+  #        uses: google-github-actions/setup-gcloud@master
+  #        with:
+  #          project_id: ${{ secrets.GCP_PROJECT_ID }}
+  #          service_account_key: ${{ secrets.SERVICE_ACCOUNT }}
+  #          export_default_credentials: true
+  #
+  #      - name: gcloud info
+  #        run: gcloud info
+  #
+  #      - name: configure-docker
+  #        run: gcloud auth configure-docker europe-west2-docker.pkg.dev
+  #
+  #      - name: configure-docker info
+  #        run: gcloud auth configure-docker
+  #
+  #      - uses: actions/checkout@v2
+  #      - name: Set up JDK 11
+  #        uses: actions/setup-java@v1
+  #        with:
+  #          java-version: 11
+  #
+  #      - name: Clean
+  #        run: ./gradlew clean
+  #
+  #      - name: Build
+  #        run: ./gradlew build
+  #
+  #      - name: Deploy to docker registery
+  #        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 
   #      - name: Deploy to Kubernetes
   #        run: kubectl apply --filename knative-deployment.yml --kubeconfig ${{ secrets.KUBE_CONFIG_FILE }}
 
   deploy:
-#    needs: [ build ]
-  - uses: danielr1996/kubectl-action@1.0.0
+    #    needs: [ build ]
+    - uses: danielr1996/kubectl-action@1.0.0
     name: Deploy
     with:
       kubeconfig: ${{ secrets.KUBE_CONFIG_FILE }}
