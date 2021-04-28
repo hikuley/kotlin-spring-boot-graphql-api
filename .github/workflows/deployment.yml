@@ -49,11 +49,13 @@ jobs:
 
   deploy:
     #    needs: [ build ]
-    - uses: danielr1996/kubectl-action@1.0.0
-    name: Deploy
-    with:
-      kubeconfig: ${{ secrets.KUBE_CONFIG_FILE }}
-      args: apply -f knative-deployment.yaml
+    runs-on: ubuntu-latest
+    steps:
+      - uses: danielr1996/kubectl-action@1.0.0
+      name: Deploy
+      with:
+        kubeconfig: ${{ secrets.KUBE_CONFIG_FILE }}
+        args: apply -f knative-deployment.yaml
 
 
 #      - name: Set GCP_PROJECT
