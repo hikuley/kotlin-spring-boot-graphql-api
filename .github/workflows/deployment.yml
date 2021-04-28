@@ -51,7 +51,7 @@ jobs:
     deploy:
       runs-on: ubuntu-latest
       steps:
-        - uses: danielr1996/kubectl-action@1.0.0
+      - uses: danielr1996/kubectl-action@1.0.0
         name: Deploy
         with:
           kubeconfig: ${{ secrets.KUBE_CONFIG_FILE }}
