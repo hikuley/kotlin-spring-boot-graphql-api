@@ -10,7 +10,7 @@ import com.netflix.graphql.dgs.DgsData
 class ShowsDataFetcher {
 
     private val shows = listOf(
-            Show("WestWorld", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
+            Show("WestWorldxxxx", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
             Show("WestWorld", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
             Show("Stranger Things", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
             Show("Stranger Things", listOf(Actor("Halil"), Actor("Mahmut"), Actor("50cent"), Actor("Teoman"))),
