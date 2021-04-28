@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-    #    needs: [setup]
     runs-on: ubuntu-latest
     steps:
       - name: Set up Cloud SDK
@@ -49,6 +48,7 @@ jobs:
   #        run: kubectl apply --filename knative-deployment.yml --kubeconfig ${{ secrets.KUBE_CONFIG_FILE }}
 
   deploy:
+    needs: [ build ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
