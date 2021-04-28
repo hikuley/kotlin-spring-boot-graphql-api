@@ -41,9 +41,9 @@ jobs:
       - name: Deploy to docker registery
         run: ./gradlew clean build jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 
-      - name: Deploy to Kubernetes
-        run: kubectl delete --filename knative-deployment.yaml
-
-      - name: Deploy to Kubernetes
+#      - name: Delete Service
+#        run: kubectl delete --filename knative-deployment.yaml
+#
+      - name: Deploy Service
         run: kubectl apply --filename knative-deployment.yaml
 
