@@ -18,7 +18,7 @@ spec:
         autoscaling.knative.dev/maxScale: "100"
     spec:
       containers:
-        - image: europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api # Reference to the image of the app
+        - image: europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api:latest # Reference to the image of the app
           env:
             - name: TARGET # The environment variable printed out by the sample app
               value: "Go Sample v1"
