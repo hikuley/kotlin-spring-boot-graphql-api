@@ -44,8 +44,8 @@ jobs:
 #      - name: Build
 #        run: ./gradlew build
 
-      - name: Deploy to docker registery
-        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
+#      - name: Deploy to docker registery
+#        run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 
       - name: Deploy to Kubernetes
         run: kubectl apply --filename knative-deployment.yml
