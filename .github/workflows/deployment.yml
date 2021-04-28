@@ -45,10 +45,19 @@ jobs:
       - name: Deploy to docker registery
         run: ./gradlew jib --image=europe-west2-docker.pkg.dev/dev-env-309121/test-repo/kotlin-spring-boot-graphql-api
 
-      - name: Deploy to Kubernetes
-        run: kubectl get all --kubeconfig ${{ secrets.KUBE_CONFIG_FILE }}
+  #      - name: Deploy to Kubernetes
+  #        run: kubectl apply --filename knative-deployment.yml --kubeconfig ${{ secrets.KUBE_CONFIG_FILE }}
 
-
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Trigger deploy
+        uses: Consensys/kubernetes-action@master
+        env:
+          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_FILE }}
+        with:
+          args: apply knative-deployment.yaml
 
 
 
