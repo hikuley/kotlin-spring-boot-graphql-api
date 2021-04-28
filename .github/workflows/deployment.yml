@@ -49,16 +49,11 @@ jobs:
 
   deploy:
 #    needs: [ build ]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Trigger deploy
-        uses: Consensys/kubernetes-action@master
-        env:
-          KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_FILE }}
-        with:
-          args: apply -f knative-deployment.yaml
-
+  - uses: danielr1996/kubectl-action@1.0.0
+    name: Deploy
+    with:
+      kubeconfig: ${{ secrets.KUBE_CONFIG_FILE }}
+      args: apply -f knative-deployment.yaml
 
 
 #      - name: Set GCP_PROJECT
