@@ -11,6 +11,10 @@ class KotlinAndSpringBootGraphqlApiApplicationTests {
 
 		// XXX
 
+		// XXX
+
+		// XXX
+
 	}
 
 }
