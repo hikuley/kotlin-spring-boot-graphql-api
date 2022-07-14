@@ -8,6 +8,9 @@ class KotlinAndSpringBootGraphqlApiApplicationTests {
 
 	@Test
 	fun contextLoads() {
+
+		// XXX
+
 	}
 
 }
